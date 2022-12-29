@@ -112,7 +112,7 @@ int main(void) {
 #include <stdio.h>
 
 int main(void) {
-    int size, arr[999];
+    int size, arr[999], j = 0;
 
     printf("Enter size: ");
     scanf("%d", &size);
@@ -124,12 +124,14 @@ int main(void) {
         if(arr[i] <= 0) {
             break;
         }
+        j++;
     }
     
     printf("[");
-    for(int i = 0; i < size; i++) {
+    for(int i = 0; i < j; i++) {
         printf("%d", arr[i]);
-        if(i != size-1) printf(",");
+    
+        if(i != j-1) printf(",");
     }
     printf("]");
     return 0;
